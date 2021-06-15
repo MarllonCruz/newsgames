@@ -1,0 +1,31 @@
+	News Games
+
+	Banco de dados:
+
+users {
+	id()int primary
+	name()varchar
+	email()varchar
+	password()varchar
+}
+posts {
+	id()int primary
+	title()varchar
+	subtitle()varchar
+	category()varchar
+	slug()varchar
+	author()varchar
+	created_at()datetime
+	body()text
+}
+highlights {
+	id()int primary
+	id_post()int
+	position()varchar Exps => feed-small, feed-medium, feed-large...
+}
+sliders {
+	id()int primary
+	id_post()int
+}
+
+

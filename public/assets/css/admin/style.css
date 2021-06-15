@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+	--main-title-color: #2F2F2F;
+	--main-desc-color: #C0C0C0;
+	--hover-title-color: #4f4f4f;
+
+	--bg-color-white: #FFFFFF;
+	--bg-color-gray: #EFEFEF;
+	--main-color-slide: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+	font-family: 'Kanit', sans-serif;
+}
+body {
+    background-color: var(--bg-color-gray);
+    margin: 0;
+    padding: 0;
+    max-width: 1000px;
+    margin: auto;
+}
+header {
+    height: 70px;
+    background-color: var(--bg-color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+header ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+header ul a {
+    text-decoration: none;
+    color: var(--main-title-color);
+    height: 70px;
+    line-height: 70px;
+    padding: 0 10px;
+}
+header ul a:first-child {
+    padding-left: 0;
+}
+header ul a.active,
+header ul a:hover {
+    color: #2079cc;
+}
+
+header .header--right span {
+    margin-right: 20px;
+}
+header .header--right a {
+    text-decoration: none;
+    background-color: rgb(224, 39, 39);
+    padding: 2px 17px;
+    color: #FFFFFF;
+    border-radius: 20px;
+}
+header .header--right a:hover {
+    background-color: rgb(247, 41, 41);
+}
