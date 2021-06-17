@@ -9,9 +9,10 @@
 <body>
     <header>
         <ul>
-            <a href="{{route('dashboard')}}" class="active"><li>Postagens</li></a>
-            <a href=""><li>Sliders</li></a>
-            <a href=""><li>Destaques</li></a>
+            <a href="{{route('dashboard')}}" {{$active=='home'?'class=active':''}} ><li>Dashboard</li></a>
+            <a href="{{route('post.index')}}" {{$active=='post'?'class=active':''}}><li>Postagens</li></a>
+            <a href="" {{$active=='slider'?'class="active"':''}}><li>Sliders</li></a>
+            <a href="" {{$active=='highlights'?'class="active"':''}}><li>Destaques</li></a>
             @if ($user->master===1)
                 <a href=""><li>Usúarios</li></a>
             @endif
@@ -24,5 +25,7 @@
     </header>
     
     @yield('content')
+
+    <script src="https://kit.fontawesome.com/07df3e3170.js" crossorigin="anonymous"></script>
 </body>
 </html>

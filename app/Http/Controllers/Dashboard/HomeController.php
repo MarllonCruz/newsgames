@@ -20,14 +20,14 @@ class HomeController extends Controller
     {
         $loggedId = intval( Auth::id() );
         $user = User::find($loggedId);
-
         if(!$user) {
             Auth::logout();
             return redirect('/dashboard');
         }
 
         return view('admin/home', [
-            'user' => $user
+            'user' => $user,
+            'active' => 'home'
         ]);
     }
 }

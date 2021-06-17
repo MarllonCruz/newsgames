@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Site;
+use App\Http\Controllers\Dashboard\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,4 +24,7 @@ Route::prefix('dashboard')->group(function(){
     Route::get('/logout', [Dashboard\AuthController::class, 'logout'])->name('logout');
 
     Route::get('/', [Dashboard\HomeController::class, 'index'])->name('dashboard');
+
+    Route::resource('/post', PostController::class);
 });
+
