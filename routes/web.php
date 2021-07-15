@@ -3,8 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Dashboard;
-use App\Http\Controllers\Site;
 use App\Http\Controllers\Dashboard\PostController;
+use App\Http\Controllers\Dashboard\AjaxController;
+use App\Http\Controllers\Dashboard\UserController;
+
+use App\Http\Controllers\Site;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +19,12 @@ use App\Http\Controllers\Dashboard\PostController;
 |
 */
 
-Route::get('/', [Site\HomeController::class, 'index']);
+Route::prefix('/')->group(function(){
+    Route::get('/', [Site\HomeController::class, 'index'])->name('/');
+    Route::get('/filter', [Site\HomeController::class, 'filter'])->name('filter');
+    Route::get('/feed/{slug}', [Site\HomeController::class, 'post'])->name('feed');
+});
+
 
 Route::prefix('dashboard')->group(function(){
     Route::get('/login', [Dashboard\AuthController::class, 'login'])->name('login');
@@ -26,5 +34,14 @@ Route::prefix('dashboard')->group(function(){
     Route::get('/', [Dashboard\HomeController::class, 'index'])->name('dashboard');
 
     Route::resource('/post', PostController::class);
+    Route::post('/post/ajax', [AjaxController::class, 'getPostSearch'])->name('search');
+
+    Route::resource('/user', UserController::class);
+
+    Route::get('/slider', [Dashboard\SliderController::class, 'index'])->name('slider');
+    Route::post('/slider', [Dashboard\SliderController::class, 'save'])->name('sliderAction');
+
+    Route::get('/highlight', [Dashboard\HighlightController::class, 'index'])->name('highlight');
+    Route::post('/highlight', [Dashboard\HighlightController::class, 'save'])->name('highlightAction');
 });
 

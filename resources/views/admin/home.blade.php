@@ -12,28 +12,28 @@
                 <i class="far fa-newspaper"></i>
                 <div class="data-count--box-info">
                     <p>Total de postagens</p>
-                    <span>999</span>
+                    <span>{{ $countPosts }}</span>
                 </div>
             </div>
             <div class="data-count--box">
                 <i class="far fa-eye"></i>
                 <div class="data-count--box-info">
                     <p>Total de visitas</p>
-                    <span>999</span>
+                    <span>{{ $countVisitors }}</span>
                 </div>
             </div>
             <div class="data-count--box">
                 <i class="fas fa-users"></i>
                 <div class="data-count--box-info">
                     <p>Total de usúarios</p>
-                    <span>999</span>
+                    <span>{{ $countUsers }}</span>
                 </div>
             </div>
             <div class="data-count--box">
                 <i class="fas fa-toggle-on"></i>
                 <div class="data-count--box-info">
                     <p>Online</p>
-                    <span>999</span>
+                    <span>{{ $countOnlines }}</span>
                 </div>
             </div>
         </div>

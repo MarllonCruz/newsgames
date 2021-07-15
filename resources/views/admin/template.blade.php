@@ -11,10 +11,10 @@
         <ul>
             <a href="{{route('dashboard')}}" {{$active=='home'?'class=active':''}} ><li>Dashboard</li></a>
             <a href="{{route('post.index')}}" {{$active=='post'?'class=active':''}}><li>Postagens</li></a>
-            <a href="" {{$active=='slider'?'class="active"':''}}><li>Sliders</li></a>
-            <a href="" {{$active=='highlights'?'class="active"':''}}><li>Destaques</li></a>
+            <a href="{{route('slider')}}" {{$active=='slider'?'class=active':''}}><li>Sliders</li></a>
+            <a href="{{route('highlight')}}" {{$active=='highlights'?'class=active':''}}><li>Destaques</li></a>
             @if ($user->master===1)
-                <a href=""><li>Usúarios</li></a>
+                <a href="{{route('user.index')}}" {{$active=='user'?'class=active':''}} ><li>Usúarios</li></a>
             @endif
         </ul>
 

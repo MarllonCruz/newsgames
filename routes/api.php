@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Dashboard\UploadController;
+//use App\Http\Controllers\Dashboard\AjaxController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/imageupload', [UploadController::class, 'imageupload'])->name('imageupload');
+//Route::middleware('auth:api')
+//    ->post('/post/ajax', [AjaxController::class, 'getPostSearch'])->name('search');

@@ -133,7 +133,7 @@ header .header--right a:hover {
 }
 
 
-/********* Post ***********/
+/********* Start-Post ***********/
 
 /* Post-Home */
 .btn-add {
@@ -153,14 +153,14 @@ header .header--right a:hover {
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #fff;
+    padding: 8px 15px;
 }
 .post-filter {
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: #fff;
     height: 80px;
-    padding: 0 15px;
 }
 .post-filter form {
     flex: 1;
@@ -207,6 +207,118 @@ header .header--right a:hover {
     font-size: 18px;
     height: auto;
 }
+.post-feed-content {
+    width: 100%;
+    height: 650px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+.post-feed-content::-webkit-scrollbar {
+    display: none;
+}
+
+.post-feed-content table {
+    width: 100%;
+}
+table thead tr th {
+    text-align: center;
+    background-color: var(--main-desc-color);
+    color: #000;
+    border-radius: 5px;
+}
+table thead tr th:nth-child(1) {
+    width: 60px;
+}
+table thead tr th:nth-child(3) {
+    width: 120px;
+}
+table thead tr th:nth-child(4) {
+    width: 180px;
+}
+table thead tr th:nth-child(5) {
+    width: 120px;
+}
+table thead tr th:nth-child(6) {
+    width: 180px;
+}
+
+table tbody tr td {
+    text-align: center;
+    background-color: var(--bg-color-gray);
+    color: #000;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 57px;
+}
+.feed tr td p {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.span_status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.span_status span {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 1px 14px;
+    color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+.span_status.active span {
+    background-color: #1ecf8b;
+}
+.span_status.desative span {
+    background-color: rgb(224, 39, 39);
+}
+.td-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.td-btns form button {
+    border: none;
+    background-color: #e84118;
+    width: 38px;
+    height: 34px;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.td-btns .btn {
+    text-decoration: none;
+    border-radius: 5px;
+    width: 38px;
+    height: 34px;
+    margin: 0 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.td-btns .btn i {
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 16px;
+    color: #fff;
+}
+.td-btns .btn.edit {
+    background-color: #fbc531;
+}
+.td-btns .btn.view {
+    background-color: #00a8ff;
+}
 
 
 /* Post-Create */
@@ -217,6 +329,20 @@ header .header--right a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.flash {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 10px;
+    margin-left: 150px;
+}
+.flash.error {
+    background-color: rgb(224, 39, 39);
+}
+.flash.success {
+    background-color: #33e29f;
 }
 .input-area {
     width: 100%;
@@ -255,3 +381,71 @@ header .header--right a:hover {
 .input-area--field input[type=submit]:hover {
     background-color: #33e29f;
 }
+.input-area--field input[type=checkbox] {
+    width: 20px;
+}
+/********* End-Post ***********/
+
+/********* Start-User ***********/
+.user-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 25px 17px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+}
+.user-box {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    text-decoration: none;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #f3f3f3;
+}
+.user-box:hover {
+    opacity: 0.9;
+}
+.user-box p {
+    height: 3px;
+    font-size: 20px;
+}
+.user-box span {
+    padding-left: 10px;
+}
+.btn-del-relativo {
+    position: relative;
+}
+.btn-del-absolute {
+    position: absolute;
+    bottom: 23px;
+    left: 345px;
+    width: 170px;
+    height: 40px;
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+.btn-del-absolute:hover {
+    opacity: 0.9;
+}
+/********* End-User ***********/
+
+
+/********* Start-Slider ********/
+.slider-content {
+    width: 100%;
+    background-color: #fff;
+    min-height: 220px;
+    padding: 20px;
+}
+
