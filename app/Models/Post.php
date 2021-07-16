@@ -13,6 +13,6 @@ class Post extends Model
 
     public function autor()
     {
-        return $this->hasOne( related: User::class, foreignKey: 'id', localKey: 'created_user');
+        return $this->hasOne(User::class, 'id', 'created_user');
     }
 }

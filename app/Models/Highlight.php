@@ -13,7 +13,7 @@ class Highlight extends Model
 
     public function post() {
 
-        return $this->hasOne(related: Post::class, foreignKey: 'id', localKey: 'id_post');
+        return $this->hasOne(Post::class, 'id', 'id_post');
 
     }
 }
