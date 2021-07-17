@@ -26,16 +26,4 @@ Cliente pode visualizar e filtrar os conteúdos das notícias.
 ## Back end
 - LARAVEL
 
-# Como executar o projeto
-Pré-requisitos: Composer, Laravel
 
-```bash
-# clonar repositório
-git clone https://github.com/marlinho20/newsgames.git
-
-# instalar dependências
-composer install
-
-# executar o projeto
-php artisan server
-```
