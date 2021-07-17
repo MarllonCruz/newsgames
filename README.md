@@ -5,6 +5,8 @@ News Games é uma aplicação CMS com foco portal de notícias em conteúdo na a
 
 aplicação consiste duas parte de sistema que são Dashboard e Site.
 
+Link do projeto = http://newsgames.marlonweb.com/public
+
 ## Dashboard
 Administrador pode gerênciar o conteúdos das notícias (criar, editar, deletar e etc).
 
